@@ -1,0 +1,12 @@
+.vscode/
+
+# Windows shell and editor artifacts
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*~
+
