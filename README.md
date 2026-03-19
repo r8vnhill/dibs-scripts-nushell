@@ -27,6 +27,8 @@ The lessons are published in Spanish, while the source code and this repository 
   - `readme-heading-module.nu` renders a heading.
   - `readme-template-module.nu` builds README content as text.
   - `readme-writer-module.nu` validates an output directory and writes the file.
+- A `structured-output/` lesson example showing how a Nushell command can return
+  a typed record for downstream field access and inspection.
 
 ## Lessons at a glance
 
@@ -34,6 +36,7 @@ The lessons are published in Spanish, while the source code and this repository 
 | ------------ | -------------------------------------- | --------- |
 | **Lesson 1** | Introduction to Nushell                | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/nushell/) |
 | **Lesson 2** | First script, modules, and validation  | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/first-script/nushell/) • `scaffolding/readme-heading-module.nu`, `scaffolding/readme-template-module.nu`, `scaffolding/readme-writer-module.nu` |
+| **Lesson 3** | Structured output                      | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/structured-output/nushell/) • `structured-output/sighting-module.nu` |
 
 ## Requirements and setup
 
@@ -65,6 +68,8 @@ The lessons are published in Spanish, while the source code and this repository 
 - `scaffolding/readme-heading-module.nu` builds one small, reusable piece of output.
 - `scaffolding/readme-template-module.nu` composes content without touching the filesystem.
 - `scaffolding/readme-writer-module.nu` performs validation and handles the side effect of saving the file.
+- `structured-output/sighting-module.nu` returns a typed sighting record that can
+  be queried by field instead of converted to plain text.
 
 **Script conventions:**
 
@@ -86,4 +91,4 @@ When extending the repository, keep modules narrow in scope and place reusable c
 ## Roadmap
 
 - Expand the repository as new Nushell lessons are published in the DIBS notes.
-- Add more examples around pipelines, structured data, and script validation.
+- Add more examples around pipelines and script validation.
