@@ -36,7 +36,7 @@ The lessons are published in Spanish, while the source code and this repository 
 | ------------ | -------------------------------------- | --------- |
 | **Lesson 1** | Introduction to Nushell                | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/nushell/) |
 | **Lesson 2** | First script, modules, and validation  | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/first-script/nushell/) • `scaffolding/readme-heading-module.nu`, `scaffolding/readme-template-module.nu`, `scaffolding/readme-writer-module.nu` |
-| **Lesson 3** | Structured output                      | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/structured-output/nushell/) • `structured-output/sighting-module.nu` |
+| **Lesson 3** | Structured output                      | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/structured-output/nushell/) • `structured-output/sighting-module.nu`, `structured-output/exploration-module.nu` |
 
 ## Requirements and setup
 
@@ -70,6 +70,8 @@ The lessons are published in Spanish, while the source code and this repository 
 - `scaffolding/readme-writer-module.nu` performs validation and handles the side effect of saving the file.
 - `structured-output/sighting-module.nu` returns a typed sighting record that can
   be queried by field instead of converted to plain text.
+- `structured-output/exploration-module.nu` returns a list of records that can be
+  filtered, projected, or displayed as a table without extra parsing.
 
 **Script conventions:**
 
