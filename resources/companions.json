@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Bilbo",
+    "kind": "hobbit",
+    "role": "burglar",
+    "on_the_quest": true,
+    "homeland": "The Shire"
+  },
+  {
+    "name": "Gandalf",
+    "kind": "wizard",
+    "role": "guide",
+    "on_the_quest": true,
+    "homeland": "Valinor"
+  },
+  {
+    "name": "Thorin",
+    "kind": "dwarf",
+    "role": "leader",
+    "on_the_quest": true,
+    "homeland": "Erebor"
+  },
+  {
+    "name": "Balin",
+    "kind": "dwarf",
+    "role": "warrior",
+    "on_the_quest": true,
+    "homeland": "Erebor"
+  },
+  {
+    "name": "Elrond",
+    "kind": "elf",
+    "role": "host",
+    "on_the_quest": false,
+    "homeland": "Rivendell"
+  },
+  {
+    "name": "Galadriel",
+    "kind": "elf",
+    "role": "advisor",
+    "on_the_quest": false,
+    "homeland": "Lothlorien"
+  },
+  {
+    "name": "Bard",
+    "kind": "human",
+    "role": "archer",
+    "on_the_quest": false,
+    "homeland": "Lake-town"
+  }
+]
