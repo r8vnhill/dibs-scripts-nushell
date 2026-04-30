@@ -21,6 +21,7 @@ Context and essential rules for agents working in this subproject.
 - Run examples directly with `nu -c`.
 - Example validation command: `nu -c "use ./scaffolding/readme-template-module.nu *; new-readme 'Sample App' --verbose"`.
 - Keep modules narrow and lesson-focused; avoid introducing a larger project framework unless requested.
+- Do not modify changelogs unless the user explicitly asks for changelog updates.
 
 ## Code Conventions
 
