@@ -1,0 +1,38 @@
+{
+    "title": "Powerslave",
+    "year": 1984,
+    "tracks": [
+        {
+            "title": "Aces High",
+            "duration_seconds": 271
+        },
+        {
+            "title": "2 Minutes to Midnight",
+            "duration_seconds": 362
+        },
+        {
+            "title": "Losfer Words (Big 'Ora)",
+            "duration_seconds": 255
+        },
+        {
+            "title": "Flash of the Blade",
+            "duration_seconds": 245
+        },
+        {
+            "title": "The Duellists",
+            "duration_seconds": 252
+        },
+        {
+            "title": "Back in the Village",
+            "duration_seconds": 315
+        },
+        {
+            "title": "Powerslave",
+            "duration_seconds": 321
+        },
+        {
+            "title": "Rime of the Ancient Mariner",
+            "duration_seconds": 825
+        }
+    ]
+}

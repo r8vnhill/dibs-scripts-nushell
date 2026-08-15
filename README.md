@@ -32,6 +32,9 @@ The lessons are published in Spanish, while the source code and this repository 
   a typed record for downstream field access and inspection.
 - A `pipelines/` lesson area with a local JSON dataset and commands that model
   filtering, projection, ordering, limiting, and lightweight transformation.
+- A `support-scripts/` lesson area showing reusable, file-based scripts: a
+  standalone layout-check script, the same check as a `run`-able pipeline
+  stage, and a typed module over a local JSON fixture.
 
 ## Lessons at a glance
 
@@ -41,10 +44,11 @@ The lessons are published in Spanish, while the source code and this repository 
 | **Lesson 2** | First script, modules, and validation  | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/first-script/nushell/) • `scaffolding/readme-heading-module.nu`, `scaffolding/readme-template-module.nu`, `scaffolding/readme-writer-module.nu` |
 | **Lesson 3** | Structured output                      | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/structured-output/nushell/) • `structured-output/sighting-module.nu`, `structured-output/exploration-module.nu` |
 | **Lesson 4** | Declarative pipelines                  | [Notes](https://dibs.ravenhill.cl/notes/software-libraries/scripting/pipelines/nushell/) • `resources/companions.json`, `pipelines/companion-module.nu` |
+| **Lesson 5** | Reusable support scripts (structured pipelines) | [Notes](https://dibs.ravenhill.cl/notes/scripting/support-scripts/nushell/) • `support-scripts/check-expected-files.nu`, `support-scripts/check-library-layout.nu`, `support-scripts/album-title-module.nu`, `resources/album.json` |
 
 ## Requirements and setup
 
-- **Nushell** installed and available as `nu`
+- **Nushell** `>=0.114.0`, available as `nu` (the `support-scripts/` lesson relies on `run`, introduced in 0.114.0; the repository is validated against 0.114.1)
 - **VS Code** or another editor with Nushell support
 - A local clone of this repository
 
@@ -87,6 +91,12 @@ The lessons are published in Spanish, while the source code and this repository 
 - `resources/companions.json` is the JSON fixture used in the pipelines lesson.
 - `pipelines/companion-module.nu` wraps the lesson flow in small composable commands
   that keep the data as records and tables, including extraction and renaming examples.
+- `support-scripts/check-expected-files.nu` computes missing project files as data,
+  run directly with `nu`.
+- `support-scripts/check-library-layout.nu` is the same check reshaped as a
+  `def main []: record -> record` pipeline stage, invoked with `run`.
+- `support-scripts/album-title-module.nu` exports a typed `record -> string`
+  command over the local `resources/album.json` fixture.
 
 **Script conventions:**
 
@@ -149,6 +159,15 @@ nu -c "use ./scaffolding/readme-template-module.nu *; new-readme 'Sample App' --
 ```
 
 When extending the repository, keep modules narrow in scope and place reusable commands under `scaffolding/` only while they remain part of the README-focused lesson sequence.
+
+**Verifying `support-scripts/`:**
+
+```powershell
+nu -c "nu-check support-scripts/check-expected-files.nu"
+nu -c "nu-check support-scripts/check-library-layout.nu"
+nu -c "nu-check --as-module support-scripts/album-title-module.nu"
+nu tests/support-scripts.nu
+```
 
 ## Roadmap
 
